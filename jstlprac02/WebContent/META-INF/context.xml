@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 커넥션풀 명 name="아무거나 작성해도 된다"  -->
+<!-- 팩토리 = 클래스를 바로 찾는다. -->
+<!-- maxActive->maxTotal로 바뀜:커넥션 객체 수
+
+ maxIdle:최대 여유분-->
+<Context>
+	<Resource name="jdbc/OracleDB"
+			auth="Container"
+			type="javax.sql.DataSource"
+			username="cha"
+			password="1111"
+			driverClassName="oracle.jdbc.driver.OracleDriver"
+			factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+			url="jdbc:oracle:thin:@localhost:1521:xe"
+			maxTotal="50"
+			maxIdle="10" /> 
+</Context>
